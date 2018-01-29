@@ -1,0 +1,183 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema",
+    "$id": "https://spec.broadstreetads.com/creative.json",
+    "type": "object",
+    "properties": {
+        "id": {
+            "$id": "/properties/id",
+            "type": "string",
+            "title": "Id",
+            "description": "The id of the creative",
+            "default": "",
+            "pattern": "[a-zA-Z_0-9\\-]+/[a-zA-Z_0-9\\-]+",
+            "examples": ["Static Banner Ad", "Facebook Page Event Listing"]
+        },
+        "name": {
+            "$id": "/properties/name",
+            "type": "string",
+            "title": "Name",
+            "description": "The name of the creative type",
+            "default": "",
+            "minLength": 1,
+            "examples": ["Static Banner Ad", "Facebook Page Event Listing"]
+        },
+        "version": {
+            "$id": "/properties/version",
+            "type": "string",
+            "title": "Version",
+            "description": "The version of the creative, in semver format",
+            "pattern": "[0-9]+\\.[0-9]+\\.[0-9]+",
+            "examples": ["Static Banner Ad", "Facebook Page Event Listing"]
+        },
+        "type": {
+            "$id": "/properties/version",
+            "enum": ["html"],
+            "title": "Version",
+            "description": "The version of the creative, in semver format"
+        },
+        "markup": {
+
+        },
+        "stylesheet": {
+
+        },
+        "script": {
+
+        },
+        "inputs": {
+            "$id": "/properties/inputs",
+            "$ref": "#/definitions/inputList"
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "name",
+        "version",
+        "inputs"
+    ],
+    "definitions": {
+        "inputList": {
+            "type": "array",
+            "description": "A list of inputs",
+            "items": {
+                "type": "object",
+                "allOf": [
+                    { "$ref": "#/definitions/input" }
+                ],
+                "oneOf": [
+                    { "$ref": "#/definitions/string" },
+                    { "$ref": "#/definitions/number" },
+                    { "$ref": "#/definitions/boolean" },
+                    { "$ref": "#/definitions/date" },
+                    { "$ref": "#/definitions/time" },
+                    { "$ref": "#/definitions/datetime" },
+                    { "$ref": "#/definitions/image" },
+                    { "$ref": "#/definitions/file" },
+                    { "$ref": "#/definitions/color" },
+                    { "$ref": "#/definitions/object" }
+                ]
+            }
+        },
+        "input": {
+            "type": "object",
+            "description": "Core properties of an input",
+            "properties": {
+                "type": { "type": "string" },
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                },
+                "label": { "type": "string" },
+                "description": { "type": "string" },
+                "array": { "type": "boolean" }
+            },
+            "required": [
+                "type",
+                "name",
+                "label",
+                "description"
+            ]
+        },
+        "string": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "string" ] },
+                "default": { "type": "string" }
+            },
+            "required": [ "default" ]
+        },
+        "number": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "number" ] },
+                "default": { "type": "number" }
+            },
+            "required": [ "default" ]
+        },
+        "boolean": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "boolean" ] },
+                "default": { "type": "boolean" }
+            },
+            "required": [ "default" ]
+        },
+        "date": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "date" ] },
+                "default": { "type": "string", "format": "date" }
+            },
+            "required": [ "default" ]
+        },
+        "time": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "time" ] },
+                "default": { "type": "string", "format": "time" }
+            },
+            "required": [ "default" ]
+        },
+        "datetime": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "datetime" ] },
+                "default": { "type": "string", "format": "date-time" }
+            },
+            "required": [ "default" ]
+        },
+        "image": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "image" ] },
+                "default": { "type": "string", "format": "uri" }
+            },
+            "required": [ "default" ]
+        },
+        "file": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "file" ] },
+                "default": { "type": "string", "format": "uri" }
+            },
+            "required": [ "default" ]
+        },
+        "color": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "color" ] },
+                "default": { "type": "string", "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" }
+            },
+            "required": [ "default" ]
+        },
+        "object": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "object" ] },
+                "inputs": { "$ref": "#/definitions/inputList" }
+            }
+        }
+    }
+}

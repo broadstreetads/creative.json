@@ -1,0 +1,76 @@
+{
+    "name": "Example Creative",
+    "description": "",
+    "id": "broadstreetads/example",
+    "type": "html",
+    "source": "https://broadstreetads/creatives/example.json",
+    "version": "1.2.3",
+    "meta": {
+        "events": [],
+        "categories": []
+    },
+    "inputs": [
+        {
+            "type": "string",
+            "name": "client_name",
+            "label": "Client Name",
+            "description": "The name of the client",
+            "default": "XYZ Corporation"
+        },
+        {
+            "type": "number",
+            "name": "client_name",
+            "label": "Client Name",
+            "description": "The name of the client",
+            "default": 0
+        },
+        {
+            "type": "boolean",
+            "name": "client_name",
+            "label": "Client Name",
+            "description": "The name of the client",
+            "default": true
+        },
+        {
+            "type": "color",
+            "name": "color",
+            "label": "Client Color",
+            "description": "The color of the client",
+            "default": "#000"
+        },
+        {
+            "type": "object",
+            "name": "client_address",
+            "label": "Client Address",
+            "description": "The name of the client",
+            "default": "XYZ Corporation",
+            "array": true,
+            "inputs": [
+                {
+                    "type": "string",
+                    "name": "client_name",
+                    "label": "Client Name",
+                    "description": "The name of the client",
+                    "default": "XYZ Corporation"
+                },
+                {
+                    "type": "string",
+                    "name": "client_name",
+                    "label": "Client Name",
+                    "description": "The name of the client",
+                    "default": "XYZ Corporation"
+                }
+            ]
+        }
+    ],
+    "html": "",
+    "javascript": "",
+    "css": "",
+    "assets": [
+        {
+            "id": "logo",
+            "type": "javascript|stylesheet|image",
+            "src": "data:image/png;base64,iVBORw0KGgoAAAAN | https://cdn.broadstreetads.com/formats/assets/example/logo.png"
+        }
+    ]
+}

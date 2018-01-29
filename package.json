@@ -1,0 +1,14 @@
+{
+  "name": "creative.json",
+  "version": "0.0.1",
+  "description": "A package to describe, validate and deploy creative.json and instances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kenny Katzgrau <kenny@broadstreetads.com>",
+  "license": "ISC",
+  "dependencies": {
+    "jsonschema": "^1.2.2"
+  }
+}
