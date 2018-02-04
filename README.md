@@ -44,9 +44,9 @@ parties who want to play that game. Make formats as pluggable as possible.
 
 ## Usage
 
-<a name="module_creative-compile"></a>
+<a name="module_creative"></a>
 
-## creative-compile
+## creative
 Find and either replace or remove items from an array.
 
 **Example**  
@@ -62,27 +62,27 @@ true
 > [html]
 ```
 
-* [creative-compile](#module_creative-compile)
-    * [~validate(creative)](#module_creative-compile..validate) ⇒ <code>boolean</code>
-    * [~compile(creative, inputs)](#module_creative-compile..compile) ⇒ <code>string</code>
+* [creative](#module_creative)
+    * [~validate(creative)](#module_creative..validate) ⇒ <code>boolean</code>
+    * [~compile(creative, inputs)](#module_creative..compile) ⇒ <code>string</code>
 
-<a name="module_creative-compile..validate"></a>
+<a name="module_creative..validate"></a>
 
-### creative-compile~validate(creative) ⇒ <code>boolean</code>
+### creative~validate(creative) ⇒ <code>boolean</code>
 Validate a creative implementation against a schema
 
-**Kind**: inner method of [<code>creative-compile</code>](#module_creative-compile)  
+**Kind**: inner method of [<code>creative</code>](#module_creative)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | creative | <code>creative</code> | The input creative object |
 
-<a name="module_creative-compile..compile"></a>
+<a name="module_creative..compile"></a>
 
-### creative-compile~compile(creative, inputs) ⇒ <code>string</code>
+### creative~compile(creative, inputs) ⇒ <code>string</code>
 Compile a creative to HTML given inputs
 
-**Kind**: inner method of [<code>creative-compile</code>](#module_creative-compile)  
+**Kind**: inner method of [<code>creative</code>](#module_creative)  
 **Returns**: <code>string</code> - - HTML  
 
 | Param | Type | Description |
