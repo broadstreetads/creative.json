@@ -51,7 +51,7 @@ Find and either replace or remove items from an array.
 
 **Example**  
 ```js
-> creative = require('creative-json')
+> const creative = require('creative-json')
 
 > let impl = JSON.parse(fs.readFileSync('sample-creatives/simple.json' ,'utf-8'))
 > creative.validate(impl)
