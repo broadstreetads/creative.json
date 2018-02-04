@@ -42,7 +42,60 @@ pluggability requires thought, but:
 Offload all non-core and risk/time-suck/cost-creating requirements to third
 parties who want to play that game. Make formats as pluggable as possible.
 
+## Usage
+
+<a name="module_creative-compile"></a>
+
+## creative-compile
+Find and either replace or remove items from an array.
+
+**Example**  
+```js
+> creative = require('creative')
+
+> let impl = JSON.parse(fs.readFileSync('samples/creative-impl.json' ,'utf-8'))
+> creative.validate(impl)
+true
+
+> let impl = JSON.parse(fs.readFileSync('samples/creative-impl.json' ,'utf-8'))
+> creative.compile(impl, inputs)
+> [html]
+```
+
+* [creative-compile](#module_creative-compile)
+    * [~validate(creative)](#module_creative-compile..validate) ⇒ <code>boolean</code>
+    * [~compile(creative, inputs)](#module_creative-compile..compile) ⇒ <code>string</code>
+
+<a name="module_creative-compile..validate"></a>
+
+### creative-compile~validate(creative) ⇒ <code>boolean</code>
+Validate a creative implementation against a schema
+
+**Kind**: inner method of [<code>creative-compile</code>](#module_creative-compile)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| creative | <code>creative</code> | The input creative object |
+
+<a name="module_creative-compile..compile"></a>
+
+### creative-compile~compile(creative, inputs) ⇒ <code>string</code>
+Compile a creative to HTML given inputs
+
+**Kind**: inner method of [<code>creative-compile</code>](#module_creative-compile)  
+**Returns**: <code>string</code> - - HTML  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| creative | <code>creative</code> | the creative |
+| inputs | <code>inputs</code> | the input array |
+
+
 ## Interesting
 
 Article, comments are good too: https://adexchanger.com/data-driven-thinking/everyone-trying-kill-rich-media/
 https://www.makethunder.com/about
+
+* * *
+
+&copy; 2018 Broadstreet Ads \<frontdesk@broadstreetads.com\>.

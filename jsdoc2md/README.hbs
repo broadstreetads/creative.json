@@ -1,0 +1,56 @@
+# creative.json
+
+A standard for rich creative definitions.
+
+## Overview
+
+The goal of this project is to create a standard for defining rich media objects
+including, but not limited to, digital ad creatives. The reasons that a
+universal standard may be desirable include:
+
+* Simplified, manual or automated exachange of creatives between agencies
+  and digital platforms. Eg, answer "what are the specs?" for both people and
+  machines.
+* Defined creative properties, or viewed from another angle, inputs, which allow
+  manual or automatic reconfiguration of a creative's properties, perhaps
+  machine learning or artificial intellligence. For example, a product ad could
+  be dynamically reconfigured to display different products depending on any
+  number of contextual hints or user traits.
+  Platforms today achieve this through closed, clumsy, and proprietary means.
+* The ability to validate and verify limits on a creative's final file size,
+  perhaps ameliorating one of several the major concerns of digital ad industry
+  critics.
+
+## Thoughts on Separation of Concerns
+
+Delivery of rich creatives can be divided into several major components
+
+* Delivery (Adserver or CDN)
+* Creative Compilation / Configuration
+* Reporting / Analytics
+
+Broadstreet attempted all three. Paper G / Thunder attempted creative
+compilation AND reporting. Of course, they're criticised for reporting that
+can't be customized.
+
+Creatives must eventually allow pluggability. How far this system goes toward
+pluggability requires thought, but:
+
+* Delivery mechanism should be pluggable (maybe simple CDN delivery?)
+* Reporting / analytics mechanism should be pluggable
+
+Offload all non-core and risk/time-suck/cost-creating requirements to third
+parties who want to play that game. Make formats as pluggable as possible.
+
+## Usage
+
+{{>main}}
+
+## Interesting
+
+Article, comments are good too: https://adexchanger.com/data-driven-thinking/everyone-trying-kill-rich-media/
+https://www.makethunder.com/about
+
+* * *
+
+&copy; 2018 Broadstreet Ads \<frontdesk@broadstreetads.com\>.

@@ -72,6 +72,10 @@
                     { "$ref": "#/definitions/date" },
                     { "$ref": "#/definitions/time" },
                     { "$ref": "#/definitions/datetime" },
+                    { "$ref": "#/definitions/timespan" },
+                    { "$ref": "#/definitions/sizing" },
+                    { "$ref": "#/definitions/richtext" },
+                    { "$ref": "#/definitions/select" },
                     { "$ref": "#/definitions/image" },
                     { "$ref": "#/definitions/file" },
                     { "$ref": "#/definitions/color" },
@@ -104,7 +108,8 @@
             "type": "object",
             "properties": {
                 "type": { "enum": [ "string" ] },
-                "default": { "type": "string" }
+                "default": { "type": "string" },
+                "pattern": { "default": "" }
             },
             "required": [ "default" ]
         },
@@ -147,6 +152,61 @@
                 "default": { "type": "string", "format": "date-time" }
             },
             "required": [ "default" ]
+        },
+        "timespan": {
+            "$comment": "Represented in seconds, implementation is up to implementor",
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "timespan" ] },
+                "default": { "type": "number" }
+            },
+            "required": [ "default" ]
+        },
+        "sizing": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "sizing" ] },
+                "options": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "string",
+                        "enum": ["%", "px", "em"]
+                    }
+                }
+            },
+            "required": [ "default" ]
+        },
+        "richtext": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "richtext" ] },
+                "default": { "type": "string" }
+            },
+            "required": [ "default" ]
+        },
+        "select": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "select" ] },
+                "multiple": { "type": "boolean" },
+                "options": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": { "type": "string" },
+                            "label": { "type": "string" }
+                        },
+                        "required": [
+                            "value",
+                            "label"
+                        ]
+                    }
+                }
+            },
+            "required": [ "multiple", "options" ]
         },
         "image": {
             "type": "object",

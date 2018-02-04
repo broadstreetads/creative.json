@@ -1,13 +1,19 @@
 {
   "name": "creative.json",
   "version": "0.0.1",
-  "description": "A package to describe, validate and deploy creative.json and instances",
-  "main": "index.js",
+  "description": "A package to describe, validate and compile creative.json and instances",
+  "repository": "https://github.com/broadstreetads/creative.json.git",
+  "main": "./lib/creative.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test-runner test/*.js",
+    "docs": "node ./node_modules/jsdoc-to-markdown/bin/cli.js -t jsdoc2md/README.hbs lib/*.js > README.md; echo"
   },
-  "author": "Kenny Katzgrau <kenny@broadstreetads.com>",
-  "license": "ISC",
+  "author": "Broadstreet Ads <frontdesk@broadstreetads.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc-to-markdown": "^3.0.2",
+    "test-runner": "^0.4.1"
+  },
   "dependencies": {
     "jsonschema": "^1.2.2"
   }

@@ -6,8 +6,7 @@
     "source": "https://broadstreetads/creatives/example.json",
     "version": "1.2.3",
     "meta": {
-        "events": [],
-        "categories": []
+        "events": []
     },
     "inputs": [
         {
@@ -37,6 +36,21 @@
             "label": "Client Color",
             "description": "The color of the client",
             "default": "#000"
+        },
+        {
+            "type": "select",
+            "multiple": false,
+            "name": "client_address",
+            "label": "Client Address",
+            "description": "The name of the client",
+            "options": [{
+                "label": "Label 1",
+                "value": "Value 1"
+            },
+            {
+                "label": "Label 2",
+                "value": "Value 2"
+            }]
         },
         {
             "type": "object",
