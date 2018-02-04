@@ -7,7 +7,7 @@ const fs = require('fs')
 const runner = new TestRunner()
 
 runner.test('validate example creative', function (t) {
-    let impl = fs.readFileSync('samples/creative-impl.json', 'utf-8')
+    let impl = fs.readFileSync('sample-creatives/all-field-types.json', 'utf-8')
     impl = JSON.parse(impl)
     a.strictEqual(
         creative.validate(impl),
@@ -16,7 +16,7 @@ runner.test('validate example creative', function (t) {
 })
 
 runner.test('compile simple creative', function (t) {
-    let impl = fs.readFileSync('samples/simple.json', 'utf-8')
+    let impl = fs.readFileSync('sample-creatives/simple.json', 'utf-8')
     impl = JSON.parse(impl)
     a.strictEqual(
         creative.compile(impl, {
