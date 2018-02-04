@@ -36,13 +36,22 @@
             "description": "The version of the creative, in semver format"
         },
         "markup": {
-
+            "type": "string",
+            "title": "Markup",
+            "description": "The markup (html) for the creative",
+            "default": ""
         },
         "stylesheet": {
-
+            "type": "string",
+            "title": "Stylesheet",
+            "description": "The styles (css) for the creative",
+            "default": ""
         },
         "script": {
-
+            "type": "string",
+            "title": "Script",
+            "description": "The script (js) for the creative",
+            "default": ""
         },
         "inputs": {
             "$id": "/properties/inputs",

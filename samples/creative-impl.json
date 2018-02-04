@@ -77,9 +77,9 @@
             ]
         }
     ],
-    "html": "",
-    "javascript": "",
-    "css": "",
+    "markup": "<!-- HTML:{DATA:client_name} -->",
+    "script": "// JS:{DATA:client_name}",
+    "stylesheet": "/* CSS: {DATA:client_name} */",
     "assets": [
         {
             "id": "logo",
