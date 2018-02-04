@@ -88,8 +88,12 @@ Compile a creative to HTML given inputs
 | Param | Type | Description |
 | --- | --- | --- |
 | creative | <code>creative</code> | the creative |
-| inputs | <code>inputs</code> | the input array |
+| inputs | <code>inputs</code> | the input hash |
 
+
+## Schema Definition
+
+%%schema%%
 
 ## Interesting
 

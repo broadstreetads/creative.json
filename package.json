@@ -1,17 +1,20 @@
 {
-  "name": "creative.json",
+  "name": "creative-json",
   "version": "0.0.1",
   "description": "A package to describe, validate and compile creative.json and instances",
   "repository": "https://github.com/broadstreetads/creative.json.git",
   "main": "./lib/creative.js",
   "scripts": {
     "test": "test-runner test/*.js",
-    "docs": "node ./node_modules/jsdoc-to-markdown/bin/cli.js -t jsdoc2md/README.hbs lib/*.js > README.md; echo"
+    "docs": "node script/docs.js"
   },
   "author": "Broadstreet Ads <frontdesk@broadstreetads.com>",
   "license": "MIT",
   "devDependencies": {
+    "glob": "^7.1.2",
     "jsdoc-to-markdown": "^3.0.2",
+    "json-schema-to-markdown": "^1.0.3",
+    "replace": "^0.3.0",
     "test-runner": "^0.4.1"
   },
   "dependencies": {
