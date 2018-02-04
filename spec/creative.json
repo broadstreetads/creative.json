@@ -83,6 +83,7 @@
                     { "$ref": "#/definitions/datetime" },
                     { "$ref": "#/definitions/timespan" },
                     { "$ref": "#/definitions/sizing" },
+                    { "$ref": "#/definitions/longtext" },
                     { "$ref": "#/definitions/richtext" },
                     { "$ref": "#/definitions/select" },
                     { "$ref": "#/definitions/image" },
@@ -183,6 +184,14 @@
                         "enum": ["%", "px", "em"]
                     }
                 }
+            },
+            "required": [ "default" ]
+        },
+        "longtext": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "longtext" ] },
+                "default": { "type": "string" }
             },
             "required": [ "default" ]
         },

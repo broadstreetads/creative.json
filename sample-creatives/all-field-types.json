@@ -11,24 +11,87 @@
     "inputs": [
         {
             "type": "string",
-            "name": "client_name",
-            "label": "Client Name",
-            "description": "The name of the client",
-            "default": "XYZ Corporation"
+            "name": "first_name",
+            "label": "First Name",
+            "description": "Your first name",
+            "default": "Ford"
         },
         {
             "type": "number",
-            "name": "client_name",
-            "label": "Client Name",
-            "description": "The name of the client",
-            "default": 0
+            "name": "answer",
+            "label": "The Answer",
+            "description": "The answer, to, you know ...",
+            "default": 42
         },
         {
             "type": "boolean",
-            "name": "client_name",
-            "label": "Client Name",
-            "description": "The name of the client",
+            "name": "cliche",
+            "label": "Is this a cliché",
+            "description": "Was the name and answer a cliche",
             "default": true
+        },
+        {
+            "type": "date",
+            "name": "birthday",
+            "label": "Birthday",
+            "description": "Your birthday, ISO 8601 format",
+            "default": "1970-01-01"
+        },
+        {
+            "type": "time",
+            "name": "birth_time",
+            "label": "Birth Time",
+            "description": "The time you were born, ISO 8601 format",
+            "default": "09:38:36"
+        },
+        {
+            "type": "datetime",
+            "name": "birth_time",
+            "label": "Birth Date & Time",
+            "description": "The exact second you were born",
+            "default": "2018-02-04T09:38:36+00:00"
+        },
+        {
+            "type": "timespan",
+            "name": "timespan",
+            "label": "Time Span",
+            "description": "A timespan, in seconds",
+            "default": 123456789
+        },
+        {
+            "type": "sizing",
+            "name": "the_size",
+            "label": "Size",
+            "description": "The size of this creative. Format hasn't really been thought out yet.",
+            "default": "300x250"
+        },
+        {
+            "type": "longtext",
+            "name": "life_story",
+            "label": "Life Story",
+            "description": "Tell me your life story",
+            "default": "Considered a fool, cause I dropped out of high school"
+        },
+        {
+            "type": "richtext",
+            "name": "detailed_life_story",
+            "label": "Detailed Life Story",
+            "description": "Tell me your life story, in detail",
+            "default": "Way back, when I wore the red and black lumberjack"
+        },
+        {
+            "type": "image",
+            "name": "photo",
+            "label": "Your Photo",
+            "description": "A photo of ya ugly face",
+            "default": "https://via.placeholder.com/600x500"
+        },
+        {
+            "type": "file",
+            "name": "PDF",
+            "label": "Some document",
+            "description": "Upload a PDF or something",
+            "default": "http://www.pdf995.com/samples/pdf.pdf"
         },
         {
             "type": "color",
