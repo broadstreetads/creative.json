@@ -47,7 +47,7 @@ parties who want to play that game. Make formats as pluggable as possible.
 <a name="module_creative"></a>
 
 ## creative
-Find and either replace or remove items from an array.
+Validate and compile creatives defined in JSON
 
 **Example**  
 ```js
