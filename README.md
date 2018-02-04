@@ -51,15 +51,16 @@ Find and either replace or remove items from an array.
 
 **Example**  
 ```js
-> creative = require('creative')
+> creative = require('creative-json')
 
-> let impl = JSON.parse(fs.readFileSync('samples/creative-impl.json' ,'utf-8'))
+> let impl = JSON.parse(fs.readFileSync('sample-creatives/simple.json' ,'utf-8'))
 > creative.validate(impl)
 true
 
-> let impl = JSON.parse(fs.readFileSync('samples/creative-impl.json' ,'utf-8'))
+> const inputs = { name: 'Broadstreet Ads' }
+> const impl = JSON.parse(fs.readFileSync('sample-creatives/simple.json' ,'utf-8'))
 > creative.compile(impl, inputs)
-> [html]
+<style>/* CSS: Broadstreet Ads *\/</style><div><!-- HTML:Broadstreet Ads --></div><script>// JS:Broadstreet Ads</script>
 ```
 
 * [creative](#module_creative)
