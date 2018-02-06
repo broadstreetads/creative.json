@@ -66,6 +66,7 @@ true
 * [creative](#module_creative)
     * [~validate(creative)](#module_creative..validate) ⇒ <code>boolean</code>
     * [~compile(creative, inputs)](#module_creative..compile) ⇒ <code>string</code>
+    * [~getTemplate()](#module_creative..getTemplate) ⇒ <code>boolean</code>
 
 <a name="module_creative..validate"></a>
 
@@ -91,6 +92,12 @@ Compile a creative to HTML given inputs
 | creative | <code>creative</code> | the creative |
 | inputs | <code>inputs</code> | the input hash |
 
+<a name="module_creative..getTemplate"></a>
+
+### creative~getTemplate() ⇒ <code>boolean</code>
+Get a minimally valid creative. Useful as a template for new creatives
+
+**Kind**: inner method of [<code>creative</code>](#module_creative)  
 
 ## Schema Definition
 

@@ -18,6 +18,7 @@
     "test-runner": "^0.4.1"
   },
   "dependencies": {
+    "deepmerge": "^2.0.1",
     "jsonschema": "^1.2.2"
   }
 }

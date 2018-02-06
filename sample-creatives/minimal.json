@@ -1,0 +1,14 @@
+{
+    "name": "Minimal Creative",
+    "description": "A minimally valid creative. Useful as a template.",
+    "id": "broadstreetads/minimal",
+    "type": "html",
+    "source": "https://broadstreetads/creative.json/sample-creatives/minimal.json",
+    "version": "1.2.3",
+    "meta": {},
+    "inputs": [],
+    "markup": "<!-- HTML:{DATA:name} -->",
+    "script": "// JS:{DATA:name}",
+    "stylesheet": "/* CSS: {DATA:name} */",
+    "assets": []
+}
