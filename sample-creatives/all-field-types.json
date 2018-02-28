@@ -62,7 +62,7 @@
             "type": "size",
             "name": "the_size",
             "label": "Size",
-            "description": "The size of this creative. Format hasn't really been thought out yet.",
+            "description": "The size of this creative.",
             "options": [
                 { "type": "fixed", "width": 300, "height": 250 },
                 { "type": "fixed", "width": 300, "height": 600 },
@@ -70,7 +70,8 @@
                 { "type": "dynamic", "width": 800, "height": 250 },
                 { "type": "custom", "width": 800, "height": 250 },
                 { "type": "none", "width": 800, "height": 250 }
-            ]
+            ],
+            "default": { "type": "none", "width": 800, "height": 250 }
         },
         {
             "type": "longtext",

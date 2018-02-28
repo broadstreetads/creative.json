@@ -182,19 +182,26 @@
                     "type": "array",
                     "minItems": 1,
                     "items": {
-                        "type": "object",
-                        "properties": {
-                            "type": { "enum": ["fixed", "dynamic", "custom", "none"] },
-                            "width": { "type": "number" },
-                            "height": { "type": "number" }
-                        },
-                        "required": [
-                            "width",
-                            "type"
-                        ]
+                        "$ref": "#/definitions/sizing"
                     }
+                },
+                "default": {
+                    "$ref": "#/definitions/sizing"
                 }
-            }
+            },
+            "required": [ "default" ]
+        },
+        "sizing": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": ["fixed", "dynamic", "custom", "none"] },
+                "width": { "type": "number" },
+                "height": { "type": "number" }
+            },
+            "required": [
+                "width",
+                "type"
+            ]
         },
         "longtext": {
             "type": "object",
