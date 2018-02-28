@@ -59,11 +59,18 @@
             "default": 123456789
         },
         {
-            "type": "sizing",
+            "type": "size",
             "name": "the_size",
             "label": "Size",
             "description": "The size of this creative. Format hasn't really been thought out yet.",
-            "default": "300x250"
+            "options": [
+                { "type": "fixed", "width": 300, "height": 250 },
+                { "type": "fixed", "width": 300, "height": 600 },
+                { "type": "fixed", "width": 800, "height": 250 },
+                { "type": "dynamic", "width": 800, "height": 250 },
+                { "type": "custom", "width": 800, "height": 250 },
+                { "type": "none", "width": 800, "height": 250 }
+            ]
         },
         {
             "type": "longtext",

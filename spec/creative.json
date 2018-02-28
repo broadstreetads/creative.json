@@ -82,7 +82,7 @@
                     { "$ref": "#/definitions/time" },
                     { "$ref": "#/definitions/datetime" },
                     { "$ref": "#/definitions/timespan" },
-                    { "$ref": "#/definitions/sizing" },
+                    { "$ref": "#/definitions/size" },
                     { "$ref": "#/definitions/longtext" },
                     { "$ref": "#/definitions/richtext" },
                     { "$ref": "#/definitions/select" },
@@ -172,20 +172,29 @@
             },
             "required": [ "default" ]
         },
-        "sizing": {
+        "size": {
             "type": "object",
             "properties": {
-                "type": { "enum": [ "sizing" ] },
+                "type": { "enum": [ "size" ] },
+                "allow_custom": { "type": "boolean"},
+                "allow_dynamic": { "type": "boolean"},
                 "options": {
                     "type": "array",
                     "minItems": 1,
                     "items": {
-                        "type": "string",
-                        "enum": ["%", "px", "em"]
+                        "type": "object",
+                        "properties": {
+                            "type": { "enum": ["fixed", "dynamic", "custom", "none"] },
+                            "width": { "type": "number" },
+                            "height": { "type": "number" }
+                        },
+                        "required": [
+                            "width",
+                            "type"
+                        ]
                     }
                 }
-            },
-            "required": [ "default" ]
+            }
         },
         "longtext": {
             "type": "object",
