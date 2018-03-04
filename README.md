@@ -65,19 +65,44 @@ true
 
 * [creative](#module_creative)
     * [~validate(creative)](#module_creative..validate) ⇒ <code>boolean</code>
+    * [~validateFile(file)](#module_creative..validateFile)
+    * [~validateRemote(url, cb)](#module_creative..validateRemote)
     * [~compile(creative, inputs)](#module_creative..compile) ⇒ <code>string</code>
-    * [~getTemplate()](#module_creative..getTemplate) ⇒ <code>boolean</code>
+    * [~getTemplate()](#module_creative..getTemplate) ⇒ <code>object</code>
 
 <a name="module_creative..validate"></a>
 
 ### creative~validate(creative) ⇒ <code>boolean</code>
-Validate a creative implementation against a schema
+Validate a creative implementation against the creative.json schema
 
 **Kind**: inner method of [<code>creative</code>](#module_creative)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | creative | <code>creative</code> | The input creative object |
+
+<a name="module_creative..validateFile"></a>
+
+### creative~validateFile(file)
+Validate a creative stored in a file and specified via creation.json format
+
+**Kind**: inner method of [<code>creative</code>](#module_creative)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| file | <code>\*</code> | The path to the creative file |
+
+<a name="module_creative..validateRemote"></a>
+
+### creative~validateRemote(url, cb)
+Validate a remote creative specified via creative.json format
+
+**Kind**: inner method of [<code>creative</code>](#module_creative)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| url | <code>\*</code> | A URL to a creative specified in creative.json format |
+| cb | <code>\*</code> | A callback (err, result:boolean) |
 
 <a name="module_creative..compile"></a>
 
@@ -94,7 +119,7 @@ Compile a creative to HTML given inputs
 
 <a name="module_creative..getTemplate"></a>
 
-### creative~getTemplate() ⇒ <code>boolean</code>
+### creative~getTemplate() ⇒ <code>object</code>
 Get a minimally valid creative. Useful as a template for new creatives
 
 **Kind**: inner method of [<code>creative</code>](#module_creative)  
