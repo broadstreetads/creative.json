@@ -60,7 +60,7 @@ true
 > creative.validateFile('sample-creatives/simple.json')
 true
 
-> creative.validateRemove('https://parkavegarage.com/some-valid-creative.json', function (err, valid) {
+> creative.validateRemote('https://parkavegarage.com/some-valid-creative.json', function (err, valid) {
  if (!err && valid)
      console.log (valid)
  else
