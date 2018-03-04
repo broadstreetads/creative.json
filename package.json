@@ -8,6 +8,9 @@
     "test": "test-runner test/*.js",
     "docs": "node script/docs.js"
   },
+  "bin": {
+    "creative": "bin/cli.js"
+  },
   "author": "Broadstreet Ads <frontdesk@broadstreetads.com>",
   "license": "MIT",
   "devDependencies": {
@@ -19,6 +22,7 @@
   },
   "dependencies": {
     "deepmerge": "^2.0.1",
-    "jsonschema": "^1.2.2"
+    "jsonschema": "^1.2.2",
+    "request": "^2.83.0"
   }
 }

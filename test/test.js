@@ -26,10 +26,8 @@ runner.test('create minimally valid template', function (t) {
 
 glob.sync('sample-creatives/*.json').forEach(file => {
     runner.test(`validate all sample creatives: ${file}` , function (t) {
-        let impl = fs.readFileSync(file, 'utf-8')
-        impl = JSON.parse(impl)
         a.strictEqual(
-            creative.validate(impl),
+            creative.validateFile(file),
             true
         )
     })
