@@ -57,6 +57,17 @@ Validate and compile creatives defined in JSON
 > creative.validate(impl)
 true
 
+> creative.validateFile('sample-creatives/simple.json')
+true
+
+> creative.validateRemove('https://parkavegarage.com/some-valid-creative.json', function (err, valid) {
+ if (!err && valid)
+     console.log (valid)
+ else
+     console.log (`Error: ${err}`)
+})
+true
+
 > const inputs = { name: 'Broadstreet Ads' }
 > const impl = JSON.parse(fs.readFileSync('sample-creatives/simple.json' ,'utf-8'))
 > creative.compile(impl, inputs)
@@ -65,7 +76,7 @@ true
 
 * [creative](#module_creative)
     * [~validate(creative)](#module_creative..validate) ⇒ <code>boolean</code>
-    * [~validateFile(file)](#module_creative..validateFile)
+    * [~validateFile(file)](#module_creative..validateFile) ⇒ <code>boolean</code>
     * [~validateRemote(url, cb)](#module_creative..validateRemote)
     * [~compile(creative, inputs)](#module_creative..compile) ⇒ <code>string</code>
     * [~getTemplate()](#module_creative..getTemplate) ⇒ <code>object</code>
@@ -83,14 +94,14 @@ Validate a creative implementation against the creative.json schema
 
 <a name="module_creative..validateFile"></a>
 
-### creative~validateFile(file)
+### creative~validateFile(file) ⇒ <code>boolean</code>
 Validate a creative stored in a file and specified via creation.json format
 
 **Kind**: inner method of [<code>creative</code>](#module_creative)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| file | <code>\*</code> | The path to the creative file |
+| file | <code>string</code> | The path to the creative file |
 
 <a name="module_creative..validateRemote"></a>
 
@@ -101,8 +112,8 @@ Validate a remote creative specified via creative.json format
 
 | Param | Type | Description |
 | --- | --- | --- |
-| url | <code>\*</code> | A URL to a creative specified in creative.json format |
-| cb | <code>\*</code> | A callback (err, result:boolean) |
+| url | <code>string</code> | A URL to a creative specified in creative.json format |
+| cb | <code>function</code> | A callback (err, result:boolean) |
 
 <a name="module_creative..compile"></a>
 
