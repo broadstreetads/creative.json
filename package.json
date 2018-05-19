@@ -1,6 +1,6 @@
 {
   "name": "creative-json",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A package to describe, validate and compile creative.json and instances",
   "repository": "https://github.com/broadstreetads/creative.json.git",
   "main": "./lib/creative.js",
