@@ -30,7 +30,7 @@
             "examples": ["Static Banner Ad", "Facebook Page Event Listing"]
         },
         "type": {
-            "$id": "/properties/version",
+            "$id": "/properties/type",
             "enum": ["html"],
             "title": "Version",
             "description": "The version of the creative, in semver format"
