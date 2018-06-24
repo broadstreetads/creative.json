@@ -92,7 +92,27 @@
             "name": "photo",
             "label": "Your Photo",
             "description": "A photo of ya ugly face",
-            "default": "https://via.placeholder.com/600x500"
+            "requiredSizes": [{"width": 300}, {"width": 800}, {"width": 2000}],
+            "default": {
+                "url": "https://via.placeholder.com/600x500",
+                "sizes": {
+                    "300": {
+                        "url": "https://via.placeholder.com/300x600",
+                        "width": 300,
+                        "height": 600
+                    },
+                    "800": {
+                        "url": "https://via.placeholder.com/800x1600",
+                        "width": 800,
+                        "height": 1600
+                    },
+                    "2000": {
+                        "url": "https://via.placeholder.com/2000x4000",
+                        "width": 2000,
+                        "height": 4000
+                    }
+                }
+            }
         },
         {
             "type": "file",

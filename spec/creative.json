@@ -246,9 +246,52 @@
             "type": "object",
             "properties": {
                 "type": { "enum": [ "image" ] },
-                "default": { "type": "string", "format": "uri" }
+                "requiredSizes": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "width": { "type": "number" },
+                            "height": { "type": "number" }
+                        },
+                        "required": [
+                            "width"
+                        ]
+                    }
+                },
+                "default": {
+                    "type": "object",
+                    "properties": {
+                        "url": {"type": "string", "format": "uri"},
+                        "sizes": {
+                            "type": "object",
+                            "patternProperties": {
+                                "^[0-9]{1,5}$": {
+                                    "$ref": "#/definitions/imageSize"
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    }
+                }
             },
-            "required": [ "default" ]
+            "required": [
+                "default",
+                "requiredSizes"
+            ]
+        },
+        "imageSize": {
+            "type": "object",
+            "properties": {
+                "url": { "type": "string", "format": "uri" },
+                "width": { "type": "number" },
+                "height": { "type": "number" }
+            },
+            "required": [
+                "url",
+                "width"
+            ]
         },
         "file": {
             "type": "object",
