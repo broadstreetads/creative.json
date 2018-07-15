@@ -10,7 +10,7 @@
             "description": "The id of the creative",
             "default": "",
             "pattern": "[a-zA-Z_0-9\\-]+/[a-zA-Z_0-9\\-]+",
-            "examples": ["Static Banner Ad", "Facebook Page Event Listing"]
+            "examples": ["broadstreetads.com/simple-banner", "broadstreetads.com/takeover"]
         },
         "name": {
             "$id": "/properties/name",
@@ -36,18 +36,21 @@
             "description": "The version of the creative, in semver format"
         },
         "markup": {
+            "$id": "/properties/markup",
             "type": "string",
             "title": "Markup",
             "description": "The markup (html) for the creative",
             "default": ""
         },
         "stylesheet": {
+            "$id": "/properties/stylesheet",
             "type": "string",
             "title": "Stylesheet",
             "description": "The styles (css) for the creative",
             "default": ""
         },
         "script": {
+            "$id": "/properties/script",
             "type": "string",
             "title": "Script",
             "description": "The script (js) for the creative",
