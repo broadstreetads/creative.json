@@ -90,6 +90,10 @@
                     { "$ref": "#/definitions/file" },
                     { "$ref": "#/definitions/color" },
                     { "$ref": "#/definitions/object" }
+                ],
+                "anyOf": [
+                    { "$ref": "#/definitions/array" },
+                    { "$ref": "#/definitions/scalar" }
                 ]
             }
         },
@@ -112,6 +116,29 @@
                 "label",
                 "description"
             ]
+        },
+        "array": {
+            "type": "object",
+            "description": "An array type",
+            "properties": {
+                "array": { "enum": [true] },
+                "minLength": { "type": "integer" },
+                "maxLength": { "type": "integer" }
+            },
+            "required": [
+                "array",
+                "minLength"
+            ]
+        },
+        "scalar": {
+            "type": "object",
+            "description": "An non-array type",
+            "properties": {
+                "array": { "enum": [false] }
+            },
+            "not": {
+                "required": ["array"]
+            }
         },
         "string": {
             "type": "object",

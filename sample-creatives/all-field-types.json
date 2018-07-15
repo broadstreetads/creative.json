@@ -150,6 +150,7 @@
             "description": "The name of the client",
             "default": "XYZ Corporation",
             "array": true,
+            "minLength": 0,
             "inputs": [
                 {
                     "type": "string",
