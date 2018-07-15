@@ -138,9 +138,6 @@
             "description": "An non-array type",
             "properties": {
                 "array": { "enum": [false] }
-            },
-            "not": {
-                "required": ["array"]
             }
         },
         "string": {
