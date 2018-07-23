@@ -220,12 +220,26 @@
         "sizing": {
             "type": "object",
             "properties": {
-                "type": { "enum": ["fixed", "dynamic", "custom", "none"] },
+                "type": { "enum": ["fixed", "flexible", "dynamic", "custom", "out-of-page", "none"] },
                 "width": { "type": "number" },
                 "height": { "type": "number" }
             },
+            "anyOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "type": { "enum": [ "fixed", "flexible", "custom" ] },
+                        "required": ["width", "height"]
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "type": { "enum": [ "dynamic", "out-of-page", "none" ] }
+                    }
+                }
+            ],
             "required": [
-                "width",
                 "type"
             ]
         },
