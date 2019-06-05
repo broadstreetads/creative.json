@@ -1,6 +1,6 @@
 {
     "name": "Simple Creative",
-    "description": "",
+    "description": "Just a simple example creative",
     "id": "broadstreetads/example",
     "type": "html",
     "source": "https://broadstreetads/creative.json/samples/simple.json",

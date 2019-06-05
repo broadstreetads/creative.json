@@ -21,6 +21,15 @@
             "minLength": 1,
             "examples": ["Static Banner Ad", "Facebook Page Event Listing"]
         },
+        "description": {
+            "$id": "/properties/description",
+            "type": "string",
+            "title": "Description",
+            "description": "The description of the creative type",
+            "default": "",
+            "minLength": 1,
+            "examples": ["This is a creative that does something nice"]
+        },
         "version": {
             "$id": "/properties/version",
             "type": "string",
@@ -148,6 +157,19 @@
                 "pattern": { "default": "" }
             },
             "required": [ "default" ]
+        },
+        "stringOrImage": {
+            "type": "object",
+            "properties": {
+                "type": { "enum": [ "object" ] },
+                "inputs": {
+                    "string": { "$ref": "#/definitions/string" },
+                    "image": { "$ref": "#/definitions/string" }
+                 },
+                "default": { "type": "string" },
+                "pattern": { "default": "" }
+            },
+            "required": [ "inputs" ]
         },
         "number": {
             "type": "object",
