@@ -68,6 +68,13 @@
         "inputs": {
             "$id": "/properties/inputs",
             "$ref": "#/definitions/inputList"
+        },
+        "meta": {
+            "$id": "/properties/meta",
+            "type": "object",
+            "title": "Meta Properties",
+            "description": "Additional information about this format",
+            "properties": {}
         }
     },
     "required": [
