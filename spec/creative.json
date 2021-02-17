@@ -171,7 +171,7 @@
                 "type": { "enum": [ "object" ] },
                 "inputs": {
                     "string": { "$ref": "#/definitions/string" },
-                    "image": { "$ref": "#/definitions/string" }
+                    "image": { "$ref": "#/definitions/image" }
                  },
                 "default": { "type": "string" },
                 "pattern": { "default": "" }

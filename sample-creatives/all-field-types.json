@@ -115,6 +115,18 @@
             }
         },
         {
+            "type": "stringorimage",
+            "name": "String or Image",
+            "label": "String or Image",
+            "description": "Place some text or an image",
+            "default": {
+                "image": "https://via.placeholder.com/600x500",
+                "text": "Hello this is a string!",
+                "value": "Hello this is a string!",
+                "type": "text"            
+            }
+        },
+        {
             "type": "file",
             "name": "PDF",
             "label": "Some document",
