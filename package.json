@@ -17,7 +17,7 @@
     "glob": "^7.1.2",
     "jsdoc-to-markdown": "^3.0.2",
     "json-schema-to-markdown": "^1.0.3",
-    "replace": "^0.3.0",
+    "replace": "^1.2.2",
     "test-runner": "^0.4.1"
   },
   "dependencies": {
